@@ -69,13 +69,13 @@
                 <div class="card shadow p-4 my-4">
                     <h5 class="mb-3">📚 Buku yang Sudah Dibeli</h5>
                     <ul class="list-group">
-                        @foreach ($buku as $book)
+                        @foreach ($buku as $b)
                             <li class="list-group-item d-flex justify-content-between align-items-center">
                                 <div>
-                                    <strong>{{ $book->judul }}</strong> <br>
-                                    <small class="text-muted">oleh {{ $book->penulis }}</small>
+                                    <strong>{{ $b->judul }}</strong> <br>
+                                    <small class="text-muted">oleh {{ $b->penulis }}</small>
                                 </div>
-                                <a href="/profile/baca/{{ Str::slug($book->judul) }}"
+                                <a href="/profile/baca/{{ Str::slug($b->judul) }}"
                                     class="btn btn-sm btn-outline-primary">Baca Buku</a>
                             </li>
                         @endforeach
